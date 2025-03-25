@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="net.siham.ServerController"
+      spacing="10" >
+    <padding>
+        <Insets top="20" left="20" right="20" />
+    </padding>
+    <TextArea fx:id="chatArea" prefHeight="400" editable="false" wrapText="true"/>
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="messageField" HBox.hgrow="ALWAYS" promptText="Entrez un message" >
+            <HBox.margin>
+                <Insets top="5" right="10" bottom="10" left="10"/>
+            </HBox.margin>
+        </TextField>
+
+        <Button text="Envoyer" onAction="#sendMessage">
+            <HBox.margin>
+                <Insets top="5" right="10" bottom="5" left="10"/>
+            </HBox.margin>
+        </Button>
+    </HBox>
+</VBox>
